@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "349537993982",
+    "project_id": "videoshort-d1ff4",
+    "storage_bucket": "videoshort-d1ff4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349537993982:android:d09ae8c45c61bc900d11af",
+        "android_client_info": {
+          "package_name": "vn.iotstar.firebaseapi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqJbASvyQ7hY355WozpkxJoz74z26KPSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
