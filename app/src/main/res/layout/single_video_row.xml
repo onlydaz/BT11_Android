@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black">
@@ -24,27 +25,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Avatar và email phía trên textVideoTitle -->
+    <!-- Avatar và email phía trên textVideoTitle -->
+
+
+
+    <!-- Thông tin video và nút bấm -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.888">
+        android:layout_marginBottom="100dp">
 
-        <!-- Phần thông tin video -->
+        <!-- Cột bên trái: Thông tin người dùng + tiêu đề -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="bottom"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="10dp">
+            android:layout_gravity="bottom">
 
+            <!-- Avatar và Email -->
+            <LinearLayout
+                android:id="@+id/userInfoLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:layout_marginStart="9dp"
+                android:layout_marginBottom="8dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imPerson"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_avatar_placeholder"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center_vertical"
+                    app:civ_border_width="0dp"
+                    app:civ_border_color="@android:color/transparent"/>
+
+                <TextView
+                    android:id="@+id/textUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="user1@gmail.com"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_marginStart="8dp"
+                    android:maxWidth="150dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Tiêu đề và mô tả video -->
             <TextView
                 android:id="@+id/textVideoTitle"
                 android:layout_width="match_parent"
@@ -75,7 +116,7 @@
                 android:shadowRadius="15" />
         </LinearLayout>
 
-        <!-- Phần nút bấm bên phải -->
+        <!-- Cột bên phải: các nút -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,22 +125,24 @@
             android:gravity="end">
 
             <ImageView
-                android:id="@+id/imPerson"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="2dp"
-                android:layout_marginEnd="18dp"
-                android:src="@drawable/ic_person_pin"
-                android:layout_gravity="end" />
-
-            <ImageView
                 android:id="@+id/favorites"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="2dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="18dp"
-                android:src="@drawable/ic_favorite"
+                android:padding="2dp"
+                android:src="@drawable/ic_favorite" />
+
+            <TextView
+                android:id="@+id/textLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="32dp"
                 android:layout_gravity="end" />
 
             <ImageView
